@@ -14,7 +14,7 @@ const bookSchema = new mongoose.Schema({
     required: [true, "Siz auther kiriting"],
   },
   first_publishing_year: {
-    type: Number,
+    type: String,
     required: true,
   },
   number_of_page:{
