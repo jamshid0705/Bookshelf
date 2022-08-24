@@ -6,7 +6,7 @@ const bookRout=require('../routes/book')
 
 app.use(express.json());
 
-app.use('/api/v1/books',bookRout)
+app.use('/',bookRout)
 
 app.all("*", function (req, res, next) {
   next(new appError("Bunday page mavjud emas", 404));
