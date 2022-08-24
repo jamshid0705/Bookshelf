@@ -36,7 +36,6 @@ const addBook = catchError(async (req, res) => {
   const book = await Book.create(data);
   responseFunction(res, 200, book);
 });
-
 ///////////// update book ///////////////
 const updateBook = catchError(async (req, res) => {
   const book = await Book.findByIdAndUpdate(req.params.id, req.body, {
