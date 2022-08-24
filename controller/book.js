@@ -49,6 +49,7 @@ const addBook = catchError(async (req, res,next) => {
 const updateBook = catchError(async (req, res) => {
   const book = await Book.findOne({isbn:req.body.isbn})
   book.status=req.body.status
+  book.save({validateBeforeSave:true})
   responseFunction(res, 201, book);
 });
 
