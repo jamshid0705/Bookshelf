@@ -19,7 +19,6 @@ const bookSchema = new mongoose.Schema({
   },
   number_of_page:{
     type:Number,
-    required:true
   },
   status:{
     type:Number,
